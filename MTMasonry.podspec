@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'MTMasonry'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of MTMasonry.'
+s.summary          = 'Masonry静态库二进制文件'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,25 +18,27 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
+Masonry静态库二进制文件 提高编译速度
+DESC
 
   s.homepage         = 'https://github.com/BestiOSDev/MTMasonry'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'BestiOSDev' => '1060545231@qq.com' }
+s.author           = { 'ZhaoBingDong' => 'dzb8818082@163.com' }
   s.source           = { :git => 'https://github.com/BestiOSDev/MTMasonry.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'MTMasonry/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'MTMasonry' => ['MTMasonry/Assets/*.png']
-  # }
+if ENV['IS_SOURCE']
+    s.source_files = 'MTMasonry/Classes/**/*{h,m}'
+    s.public_header_files = 'MTMasonry/Classes/**/*.h'
+else
+s.ios.vendored_frameworks = 'MTMasonry/Framework/MTMasonry.framework'
+end
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+s.requires_arc = true
+s.frameworks = 'Foundation' , 'UIKit'
+s.xcconfig = { 'OTHER_LDFLAGS' => '-ObjC' }
+s.ios.deployment_target = '10.0'
+
 end
