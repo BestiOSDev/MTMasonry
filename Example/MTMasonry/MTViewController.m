@@ -6,7 +6,7 @@
 //  Copyright (c) 2019 BestiOSDev. All rights reserved.
 //
 
-#import "MTMasonry.h"
+#import <MTMasonry/MTMasonry.h>
 #import "MTViewController.h"
 
 @interface MTViewController ()
