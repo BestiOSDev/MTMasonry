@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MTMasonry'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
 s.summary          = 'Masonry静态库二进制文件'
 
 # This description is used to generate tags and improve search results.
@@ -39,6 +39,5 @@ end
 s.requires_arc = true
 s.frameworks = 'Foundation' , 'UIKit'
 s.xcconfig = { 'OTHER_LDFLAGS' => '-ObjC' }
-s.ios.deployment_target = '10.0'
 
 end
