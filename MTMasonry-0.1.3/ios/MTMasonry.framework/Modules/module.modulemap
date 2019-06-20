@@ -1,0 +1,6 @@
+framework module MTMasonry {
+  umbrella header "MTMasonry.h"
+
+  export *
+  module * { export * }
+}

@@ -14,7 +14,6 @@
 #import "MASConstraint.h"
 #import "MASConstraintMaker.h"
 #import "MASLayoutConstraint.h"
-#import "Masonry.h"
 #import "MASUtilities.h"
 #import "MASViewAttribute.h"
 #import "MASViewConstraint.h"
