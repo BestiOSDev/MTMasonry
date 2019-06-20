@@ -11,7 +11,6 @@
 #endif
 
 #import "MASCompositeConstraint.h"
-#import "MASConstraint+Private.h"
 #import "MASConstraint.h"
 #import "MASConstraintMaker.h"
 #import "MASLayoutConstraint.h"
@@ -19,6 +18,7 @@
 #import "MASUtilities.h"
 #import "MASViewAttribute.h"
 #import "MASViewConstraint.h"
+#import "MTMasonry.h"
 #import "NSArray+MASAdditions.h"
 #import "NSArray+MASShorthandAdditions.h"
 #import "NSLayoutConstraint+MASDebugAdditions.h"

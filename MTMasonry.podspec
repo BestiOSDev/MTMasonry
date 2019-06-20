@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MTMasonry'
-  s.version          = '0.1.2'
+  s.version          = '0.1.3'
 s.summary          = 'Masonry静态库二进制文件'
 
 # This description is used to generate tags and improve search results.
@@ -27,11 +27,11 @@ s.author           = { 'ZhaoBingDong' => 'dzb8818082@163.com' }
   s.source           = { :git => 'https://github.com/BestiOSDev/MTMasonry.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
 if ENV['IS_SOURCE']
     s.source_files = 'MTMasonry/Classes/**/*{h,m}'
-    s.public_header_files = 'MTMasonry/Classes/**/*.h'
+    s.public_header_files = 'MTMasonry/Classes/Public/**/*.h'
 else
 s.ios.vendored_frameworks = 'MTMasonry/Framework/MTMasonry.framework'
 end
