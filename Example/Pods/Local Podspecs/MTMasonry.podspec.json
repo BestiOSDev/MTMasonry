@@ -1,6 +1,6 @@
 {
   "name": "MTMasonry",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "summary": "Masonry静态库二进制文件",
   "description": "Masonry静态库二进制文件 提高编译速度",
   "homepage": "https://github.com/BestiOSDev/MTMasonry",
@@ -13,13 +13,14 @@
   },
   "source": {
     "git": "https://github.com/BestiOSDev/MTMasonry.git",
-    "tag": "0.1.3"
+    "tag": "0.1.4"
   },
   "platforms": {
     "ios": "9.0"
   },
-  "source_files": "MTMasonry/Classes/**/*{h,m}",
-  "public_header_files": "MTMasonry/Classes/Public/**/*.h",
+  "ios": {
+    "vendored_frameworks": "MTMasonry/Framework/MTMasonry.framework"
+  },
   "requires_arc": true,
   "frameworks": [
     "Foundation",
